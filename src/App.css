@@ -94,7 +94,7 @@ main {
 }
 
 .home-media img {
-  width: min(420px, 86%);
+  width: 100%;
   margin-bottom: 0;
 }
 
