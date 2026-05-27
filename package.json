@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build --base=/learnlingo/",
+    "build": "tsc -b && vite build --base=/LearnLingo/",
     "lint": "eslint .",
     "preview": "vite preview"
   },
