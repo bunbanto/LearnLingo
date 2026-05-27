@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1184px;
+  margin: 0 auto;
+  padding: 20px 32px;
+  gap: 32px;
+}
+
+.logo-container,
+.logo,
+.nav,
+.auth-btns,
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo-mark {
+  display: inline-grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--surface);
+  font-weight: 700;
+}
+
+.nav {
+  gap: 28px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav a {
+  text-decoration: none;
+  transition: color 180ms ease;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: #c9961a;
+}
+
+.auth-btns,
+.user-info {
+  gap: 16px;
+}
+
+.username {
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.login-btn,
+.register-btn,
+.logout-btn {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.register-btn,
+.logout-btn {
+  padding: 14px 39px;
+  background: var(--text);
+  color: var(--surface);
+}
+
+.login-btn {
+  padding: 12px 0;
+}
+
+@media (max-width: 820px) {
+  .header {
+    flex-wrap: wrap;
+    padding-inline: 20px;
+  }
+
+  .nav {
+    order: 3;
+    width: 100%;
+  }
+}

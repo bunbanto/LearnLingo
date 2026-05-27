@@ -1,0 +1,40 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(18, 20, 23, 0.4);
+}
+
+.modal-content {
+  position: relative;
+  width: min(566px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow: auto;
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 64px;
+  box-shadow: var(--shadow);
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+}
+
+@media (max-width: 640px) {
+  .modal-content {
+    padding: 48px 24px 32px;
+  }
+}
