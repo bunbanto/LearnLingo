@@ -2,6 +2,10 @@
   min-height: 100vh;
 }
 
+.app-container.catalog-bg {
+  background: var(--bg);
+}
+
 main {
   max-width: 1184px;
   margin: 0 auto;
@@ -20,8 +24,8 @@ main {
 }
 
 .home-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 568px;
+  display: flex;
+  /* grid-template-columns: minmax(0, 1fr) 568px; */
   gap: 24px;
   min-height: 530px;
 }
@@ -31,14 +35,20 @@ main {
   flex-direction: column;
   justify-content: center;
   border-radius: 8px;
-  background: var(--surface);
+  background: var(--bg);
   padding: 64px;
+  border-radius: 30px;
+
+width: 720px;
 }
 
 .home-copy h1 {
-  max-width: 548px;
-  font-size: 48px;
-  line-height: 1.17;
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 48px;
+line-height: 117%;
+letter-spacing: -0.02em;
+color: #121417;
   letter-spacing: 0;
 }
 
@@ -86,11 +96,14 @@ main {
 }
 
 .home-media {
-  display: grid;
+  display: flex;
   place-items: end center;
   overflow: hidden;
   border-radius: 8px;
   background: #fbe9ba;
+  border-radius: 30px;
+  max-width: 568px;
+
 }
 
 .home-media img {
@@ -129,6 +142,8 @@ main {
 .teachers-page {
   position: relative;
   padding-top: 32px;
+  width: 1184px;
+height: 1048px;
 }
 
 .filters {
@@ -172,6 +187,10 @@ main {
   background: var(--surface);
   padding: 24px;
   text-align: left;
+  border-radius: 24px;
+
+width: 1184px;
+height: 328px;
 }
 
 .avatar-wrap {

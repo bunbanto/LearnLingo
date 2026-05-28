@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useAuth } from "./useAuth";
 import { Header } from "./Header";
 import { Home } from "./Home";
@@ -12,15 +12,17 @@ import "./App.css";
 
 function App() {
   const { isAuthenticated, isLoading } = useAuth();
+  const { pathname } = useLocation();
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const isCatalogPage = pathname === "/teachers" || pathname === "/favorites";
 
   if (isLoading) {
     return <div className="loader">Loading...</div>;
   }
 
   return (
-    <div className="app-container">
+    <div className={`app-container ${isCatalogPage ? "catalog-bg" : ""}`}>
       <Header
         onLoginOpen={() => setIsLoginOpen(true)}
         onRegisterOpen={() => setIsRegisterOpen(true)}
